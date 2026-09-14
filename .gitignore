@@ -1,0 +1,21 @@
+# Environment variables
+.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Output and temporary data
+output/scratch/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
