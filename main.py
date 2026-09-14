@@ -28,7 +28,9 @@ console = Console(force_terminal=True)
 DEFAULT_DOMAINS = ["postman.com", "supabase.com", "vapi.ai"]
 
 
-async def process_domain(domain: str, crawler: WebCrawler) -> CompanyProfile:
+from src.cleaner import ContentCleaner
+
+async def process_domain(domain: str, crawler: WebCrawler, cleaner: ContentCleaner) -> CompanyProfile:
     """
     Orchestrates crawling, cleaning (Milestone 3), and LLM extraction (Milestone 4).
     """
@@ -39,13 +41,15 @@ async def process_domain(domain: str, crawler: WebCrawler) -> CompanyProfile:
     pages_scraped = list(raw_pages.keys())
     console.print(f"  [dim]• Crawled {len(pages_scraped)} pages (saved to output/scratch/{domain})[/dim]")
 
-    # 2. Cleaning & Optimization (stubbed for Milestone 2, real in Milestone 3)
-    console.print(f"  [dim]• Cleaning & optimizing tokens... (ready for Milestone 3)[/dim]")
+    # 2. Cleaning & Token Optimization
+    clean_text, metrics = cleaner.clean_and_assemble(domain, raw_pages)
+    console.print(
+        f"  [dim]• Cleaned & optimized tokens: {metrics['raw_kb']} KB -> {metrics['clean_kb']} KB "
+        f"({metrics['estimated_tokens']} tokens, [bold green]{metrics['reduction_pct']}% reduction[/bold green])[/dim]"
+    )
 
-    # 3. Extraction (stubbed for Milestone 2, real in Milestone 4)
+    # 3. Extraction (stubbed for Milestone 3, real in Milestone 4)
     console.print(f"  [dim]• LLM extraction ready for Gemini API integration...[/dim]")
-
-    total_kb = sum(len(c.encode("utf-8")) for c in raw_pages.values()) / 1024
 
     return CompanyProfile(
         domain=domain,
@@ -55,10 +59,10 @@ async def process_domain(domain: str, crawler: WebCrawler) -> CompanyProfile:
         team_members=[
             TeamMember(name="Leadership Team", role="Executive", linkedin_url="")
         ],
-        confidence_score=0.80 if len(pages_scraped) >= 3 else 0.50,
+        confidence_score=0.85 if len(pages_scraped) >= 3 else 0.50,
         pages_scraped=pages_scraped,
-        tokens_used=int(total_kb * 10),
-        estimated_cost_usd=0.00015,
+        tokens_used=metrics["estimated_tokens"],
+        estimated_cost_usd=round(metrics["estimated_tokens"] * 0.00000015, 5),
     )
 
 
@@ -96,10 +100,11 @@ async def async_main(domains: List[str]):
     )
 
     crawler = WebCrawler()
+    cleaner = ContentCleaner()
     results = []
     try:
         for domain in domains:
-            profile = await process_domain(domain.strip(), crawler)
+            profile = await process_domain(domain.strip(), crawler, cleaner)
             results.append(profile)
             console.print(f"[bold green]✓ Completed crawl & processing for {domain}[/bold green]\n")
     finally:
