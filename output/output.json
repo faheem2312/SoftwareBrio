@@ -1,8 +1,8 @@
 [
   {
     "domain": "postman.com",
-    "company_overview": "Postman is an AI-native API platform designed for building and using APIs, simplifying each step of the API lifecycle. It enables engineers and organizations to develop, test, manage, and distribute APIs and services, streamlining collaboration for faster creation.",
-    "target_audience": "Postman is built for engineers, including individuals, teams, and enterprises, involved in building, testing, managing, and distributing APIs. It serves solo developers, collaborative teams, and large organizations, including Fortune 500 companies, seeking to scale and govern their API operations.",
+    "company_overview": "Postman is an AI-native API platform for building and using APIs, simplifying each step of the API lifecycle. It enables engineers to develop, test, manage, and distribute APIs and services, streamlining collaboration for better and faster API creation.",
+    "target_audience": "The platform is built for individual engineers, teams, and enterprises involved in API development, testing, management, and distribution. It serves developers who need to move faster with AI and automation, as well as organizations requiring collaboration, scale, governance, and control for their API workflows.",
     "contact_emails": [
       "help@postman.com",
       "info@postman.com",
@@ -28,40 +28,42 @@
     ],
     "confidence_score": 0.95,
     "pages_scraped": [
-      "https://postman.com",
-      "https://www.postman.com/company/contact-sales/",
-      "https://postman.com/company/about-postman/",
-      "https://postman.com/company/press-media/",
-      "https://postman.com/pricing/",
-      "https://postman.com/company/careers/"
+      "https://postman.com/api-network-sitemap-public-team-collections.xml",
+      "https://postman.com/api-network-sitemap-public-team-profiles-1.xml",
+      "https://postman.com/api-network-sitemap-public-team-profiles-2.xml",
+      "https://postman.com/api-network-sitemap-public-team-profiles-3.xml",
+      "https://postman.com/company/about-postman",
+      "https://postman.com/company/careers",
+      "https://postman.com/company/contact-sales",
+      "https://postman.com/company/press-media",
+      "https://postman.com/index",
+      "https://postman.com/pricing"
     ],
-    "tokens_used": 10226,
-    "estimated_cost_usd": 0.000838
+    "tokens_used": 10330,
+    "estimated_cost_usd": 0.000845
   },
   {
     "domain": "supabase.com",
-    "company_overview": "Supabase provides an open-source backend-as-a-service platform that offers a Postgres database, authentication, data APIs, edge functions, realtime data, storage, and vector embeddings. It serves as a complete Postgres developer platform designed to help users build and scale applications, particularly for AI-built applications and innovation teams.",
-    "target_audience": "The platform is built for developers, including citizen developers, engineers, and non-technical consultants, who are building applications, especially high-performance SaaS and AI-built applications. It caters to startups, innovation teams, and enterprises looking for production-ready backend infrastructure.",
-    "contact_emails": [
-      "express@4.18.2"
-    ],
+    "company_overview": "Supabase is an open-source developer platform that provides a Postgres database along with services like Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings. It offers a complete backend infrastructure designed to help developers build and scale applications from prototypes to production.",
+    "target_audience": "The platform is built for developers, AI builders, innovation teams, and enterprises, including both technical and non-technical users like citizen developers. It caters to those looking to quickly build and scale applications, from startups to large organizations requiring enterprise-grade security and integration.",
+    "contact_emails": [],
     "team_members": [],
-    "confidence_score": 0.7,
+    "confidence_score": 0.8,
     "pages_scraped": [
-      "https://supabase.com",
-      "https://supabase.com/contact/sales",
+      "https://supabase.com/careers",
       "https://supabase.com/company",
+      "https://supabase.com/contact/sales",
+      "https://supabase.com/index",
       "https://supabase.com/pricing",
-      "https://supabase.com/solutions/innovation-teams",
-      "https://supabase.com/careers"
+      "https://supabase.com/solutions/innovation-teams"
     ],
-    "tokens_used": 9368,
-    "estimated_cost_usd": 0.000739
+    "tokens_used": 9282,
+    "estimated_cost_usd": 0.000731
   },
   {
     "domain": "vapi.ai",
-    "company_overview": "Vapi provides a unified, API-native platform for building, testing, and deploying AI voice agents at scale. It handles infrastructure, orchestration, and real-time monitoring, enabling businesses to configure voice and conversation flows rapidly.",
-    "target_audience": "Vapi targets enterprises, including Fortune 100 companies, and developers looking to deploy AI voice agents. Its pricing tiers also cater to builders and early teams, scaling teams in production, and sophisticated organizations.",
+    "company_overview": "Vapi provides a unified platform for building, testing, and deploying AI voice agents, handling the underlying infrastructure for rapid development. It offers orchestration, real-time monitoring, and enterprise-grade configurability designed for scalable voice solutions.",
+    "target_audience": "Vapi targets developers, builders, and teams ranging from early-stage to scaling and sophisticated organizations, including enterprises and Fortune 100 companies. Its platform is designed for those looking to deploy and manage AI voice agents at scale, with specific applications for sales teams.",
     "contact_emails": [],
     "team_members": [
       {
@@ -72,14 +74,14 @@
     ],
     "confidence_score": 0.75,
     "pages_scraped": [
-      "https://vapi.ai",
-      "https://vapi.ai/pricing",
-      "https://vapi.ai/careers",
+      "https://vapi.ai/blog/category/company/news",
       "https://vapi.ai/blog/dynamic-range-compression",
-      "https://vapi.ai/blog/category/company_news",
-      "https://vapi.ai/custom-agents/automated-sales-team-performance-reports"
+      "https://vapi.ai/careers",
+      "https://vapi.ai/custom-agents/automated-sales-team-performance-reports",
+      "https://vapi.ai/index",
+      "https://vapi.ai/pricing"
     ],
-    "tokens_used": 6491,
-    "estimated_cost_usd": 0.000526
+    "tokens_used": 6506,
+    "estimated_cost_usd": 0.00053
   }
 ]

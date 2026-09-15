@@ -7,7 +7,11 @@ import json
 import logging
 import os
 import re
+import warnings
 from typing import List, Optional
+
+# Suppress harmless Google GenAI AFC recommendation warning for clean CLI logs
+warnings.filterwarnings("ignore", message=".*automatic function calling.*")
 
 from google import genai
 from google.genai import types
@@ -218,11 +222,13 @@ class LLMExtractor:
 
                 # Fallback email extraction from raw text if LLM missed verbatim mailto/emails
                 if not profile.contact_emails:
-                    regex_emails = re.findall(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", cleaned_content)
+                    strict_email_pattern = re.compile(r"\b[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}\b")
+                    regex_emails = strict_email_pattern.findall(cleaned_content)
                     valid_emails = [
                         e.lower() for e in regex_emails
                         if not any(e.lower().endswith(ext) for ext in [".png", ".jpg", ".jpeg", ".webp", ".svg", ".js", ".css"])
-                        and not e.lower().startswith(("wixpress", "example", "sentry", "git@"))
+                        and not e.lower().startswith(("wixpress", "example", "sentry", "git@", "npm@"))
+                        and not re.search(r"@[0-9.]+$", e)  # Exclude npm package versions like express@4.18.2
                     ]
                     if valid_emails:
                         profile.contact_emails = list(dict.fromkeys(valid_emails))
