@@ -65,12 +65,14 @@ class CompanyProfile(BaseModel):
     @field_validator("contact_emails", mode="before")
     @classmethod
     def deduplicate_emails(cls, v):
+        import re
+        email_regex = re.compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$")
         if isinstance(v, list):
             seen = set()
             unique_emails = []
             for email in v:
                 clean_email = str(email).strip().lower()
-                if clean_email and clean_email not in seen:
+                if clean_email and clean_email not in seen and email_regex.match(clean_email):
                     seen.add(clean_email)
                     unique_emails.append(clean_email)
             return unique_emails
