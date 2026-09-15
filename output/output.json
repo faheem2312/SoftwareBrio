@@ -1,0 +1,28 @@
+[
+  {
+    "domain": "vapi.ai",
+    "company_overview": "Vapi.ai provides cloud software and developer platform infrastructure. The service enables organizations to develop, test, and scale modern applications.",
+    "target_audience": "Software engineers and engineering teams building modern applications.",
+    "contact_emails": [
+      "contact@vapi.ai"
+    ],
+    "team_members": [
+      {
+        "name": "Leadership Team",
+        "role": "Executive",
+        "linkedin_url": ""
+      }
+    ],
+    "confidence_score": 0.35,
+    "pages_scraped": [
+      "https://vapi.ai",
+      "https://vapi.ai/careers",
+      "https://vapi.ai/custom-agents/automated-sales-team-performance-reports",
+      "https://vapi.ai/pricing",
+      "https://vapi.ai/blog/dynamic-range-compression",
+      "https://vapi.ai/blog/category/company_news"
+    ],
+    "tokens_used": 5383,
+    "estimated_cost_usd": 0.0
+  }
+]
