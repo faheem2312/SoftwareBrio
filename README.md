@@ -108,13 +108,18 @@ playwright install chromium
 ### 5. Configure Environment Variables
 Copy `.env.example` to `.env` and add your Google Gemini API key:
 ```bash
+# On Windows (PowerShell) or Linux/macOS:
 cp .env.example .env
+
+# On Windows (Command Prompt):
+copy .env.example .env
 ```
-Edit `.env`:
+Edit `.env` and insert your API key:
 ```ini
 GEMINI_API_KEY=AIzaSy...your_gemini_api_key_here
 GEMINI_MODEL=gemini-2.5-flash
-# Optional:
+
+# Optional External Search Key for LinkedIn Fallback:
 TAVILY_API_KEY=tvly-...
 ```
 
@@ -134,10 +139,14 @@ python main.py --domains stripe.com github.com linear.app
 
 ---
 
-## 📊 Verification Scripts
+## 🧪 Automated Testing & Verification
 
-You can run individual verification steps corresponding to each milestone:
+Run the automated test suite with `pytest`:
+```bash
+python -m pytest
+```
 
+You can also run individual milestone test scripts:
 - **Crawler & Discovery Test:**
   ```bash
   python test_crawler.py

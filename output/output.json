@@ -1,69 +1,65 @@
 [
   {
     "domain": "postman.com",
-    "company_overview": "Postman is an AI-native API platform for building and using APIs, simplifying each step of the API lifecycle. It enables engineers to develop, test, manage, and distribute APIs and services, streamlining collaboration for better and faster API creation.",
-    "target_audience": "The platform is built for individual engineers, teams, and enterprises involved in API development, testing, management, and distribution. It serves developers who need to move faster with AI and automation, as well as organizations requiring collaboration, scale, governance, and control for their API workflows.",
+    "company_overview": "Postman is an AI-native API platform that enables engineers to develop, test, manage, and distribute APIs and services. It simplifies each step of the API lifecycle and streamlines collaboration to facilitate faster API creation.",
+    "target_audience": "Postman is built for individuals, teams, and enterprises, specifically engineers and developers, who are involved in building, testing, managing, and distributing APIs at various scales. This includes solo developers, collaborative teams, and large organizations, including Fortune 500 companies.",
     "contact_emails": [
+      "accommodations@postman.com",
       "help@postman.com",
       "info@postman.com",
-      "info-jp@postman.com",
-      "accommodations@postman.com"
+      "info-jp@postman.com"
     ],
     "team_members": [
       {
         "name": "Abhinav Asthana",
-        "role": "CEO/Co-Founder",
+        "role": "CEO and Co-founder",
         "linkedin_url": null
       },
       {
         "name": "Ankit Sobti",
-        "role": "CTO/Co-Founder",
+        "role": "Co-founder",
         "linkedin_url": null
       },
       {
         "name": "Abhijit Kane",
-        "role": "Product Architect/Co-Founder",
+        "role": "Co-founder",
         "linkedin_url": null
       }
     ],
     "confidence_score": 0.95,
     "pages_scraped": [
-      "https://postman.com/api-network-sitemap-public-team-collections.xml",
-      "https://postman.com/api-network-sitemap-public-team-profiles-1.xml",
-      "https://postman.com/api-network-sitemap-public-team-profiles-2.xml",
-      "https://postman.com/api-network-sitemap-public-team-profiles-3.xml",
-      "https://postman.com/company/about-postman",
-      "https://postman.com/company/careers",
-      "https://postman.com/company/contact-sales",
-      "https://postman.com/company/press-media",
-      "https://postman.com/index",
-      "https://postman.com/pricing"
+      "https://postman.com",
+      "https://postman.com/company/careers/",
+      "https://www.postman.com/company/contact-sales/",
+      "https://postman.com/pricing/",
+      "https://postman.com/company/about-postman/",
+      "https://postman.com/company/press-media/"
     ],
-    "tokens_used": 10330,
-    "estimated_cost_usd": 0.000845
+    "tokens_used": 10164,
+    "estimated_cost_usd": 0.00083
   },
   {
     "domain": "supabase.com",
-    "company_overview": "Supabase is an open-source developer platform that provides a Postgres database along with services like Authentication, Data APIs, Edge Functions, Realtime Data, Storage, and Vector embeddings. It offers a complete backend infrastructure designed to help developers build and scale applications from prototypes to production.",
-    "target_audience": "The platform is built for developers, AI builders, innovation teams, and enterprises, including both technical and non-technical users like citizen developers. It caters to those looking to quickly build and scale applications, from startups to large organizations requiring enterprise-grade security and integration.",
+    "company_overview": "Supabase is a Postgres development platform that provides a suite of backend services including a database, authentication, data APIs, edge functions, realtime data, storage, and vector embeddings. It enables developers and innovation teams to build and scale applications by offering production-ready infrastructure and tools.",
+    "target_audience": "Supabase targets developers, innovation teams, startups, and enterprises, including both technical and non-technical users like citizen developers and real estate agents. It is particularly suited for those building AI-powered applications and high-performance SaaS applications.",
     "contact_emails": [],
     "team_members": [],
-    "confidence_score": 0.8,
+    "confidence_score": 0.75,
     "pages_scraped": [
-      "https://supabase.com/careers",
-      "https://supabase.com/company",
-      "https://supabase.com/contact/sales",
-      "https://supabase.com/index",
+      "https://supabase.com",
       "https://supabase.com/pricing",
+      "https://supabase.com/contact/sales",
+      "https://supabase.com/company",
+      "https://supabase.com/careers",
       "https://supabase.com/solutions/innovation-teams"
     ],
-    "tokens_used": 9282,
-    "estimated_cost_usd": 0.000731
+    "tokens_used": 9347,
+    "estimated_cost_usd": 0.000735
   },
   {
     "domain": "vapi.ai",
-    "company_overview": "Vapi provides a unified platform for building, testing, and deploying AI voice agents, handling the underlying infrastructure for rapid development. It offers orchestration, real-time monitoring, and enterprise-grade configurability designed for scalable voice solutions.",
-    "target_audience": "Vapi targets developers, builders, and teams ranging from early-stage to scaling and sophisticated organizations, including enterprises and Fortune 100 companies. Its platform is designed for those looking to deploy and manage AI voice agents at scale, with specific applications for sales teams.",
+    "company_overview": "Vapi provides a unified, API-native platform for building, deploying, and managing AI voice agents at scale. It handles infrastructure, orchestration, and real-time monitoring, enabling businesses to create conversational AI experiences.",
+    "target_audience": "Vapi's platform is designed for enterprises, including Fortune 100 companies, and developers who need to build and deploy AI voice agents at scale. It also targets sales teams and customer support operations within businesses, ranging from early-stage builders to sophisticated organizations.",
     "contact_emails": [],
     "team_members": [
       {
@@ -74,14 +70,14 @@
     ],
     "confidence_score": 0.75,
     "pages_scraped": [
-      "https://vapi.ai/blog/category/company/news",
+      "https://vapi.ai",
       "https://vapi.ai/blog/dynamic-range-compression",
-      "https://vapi.ai/careers",
       "https://vapi.ai/custom-agents/automated-sales-team-performance-reports",
-      "https://vapi.ai/index",
-      "https://vapi.ai/pricing"
+      "https://vapi.ai/pricing",
+      "https://vapi.ai/careers",
+      "https://vapi.ai/blog/category/company_news"
     ],
-    "tokens_used": 6506,
-    "estimated_cost_usd": 0.00053
+    "tokens_used": 6501,
+    "estimated_cost_usd": 0.000529
   }
 ]
